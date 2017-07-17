@@ -1,0 +1,461 @@
+html{
+    font-size: 10px;
+    height: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh 70vh 100vh 40vh 60vh;
+    grid-template-areas: 
+      "header"
+      "post-header"
+      "explore"
+      "newsletter"
+      "footer";
+    grid-row-gap: 2rem;
+    font-size: 1.6rem;
+    font-family: Khula, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 7rem auto;
+    grid-template-areas: 
+    "pre-nav"
+    "nav"
+    "bookings";
+}
+.pre-nav{
+    display: grid;
+    grid-template-columns: 22% 13% 30% 13% 22%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sm-platform call-time logo user search";
+    border-bottom: 1px solid #e2e7e8;
+}
+.pre-nav a{
+    color: #82979c;
+    text-decoration: none;
+}
+.sm-platform{
+    text-align: right;
+    padding-right: 3rem;
+    padding-top: 9rem;
+    border-right: 1px solid #e2e7e8;
+}
+.sm-platform a{padding-left: 2.5rem;}
+.call-time{
+    border-right: 1px solid #e2e7e8;
+    font-size: 1.3rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1.8rem;
+}
+.call-time h6{
+    font-weight: lighter;
+    letter-spacing: .5rem;
+}
+.call-time p{font-weight: 550}
+.logo{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Righteous', cursive;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    border-right: 1px solid #e2e7e8;
+}
+.user{
+    border-right: 1px solid #e2e7e8;
+    padding-left: 3rem;
+    padding-top: 5rem;
+    font-size: 1.6rem;
+}
+.user a{
+    margin-right: 3rem;
+    border: 1px solid #e2e7e8;
+    border-radius: 50% 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+/*.user span{
+    position: absolute;
+    margin-left: -3.8rem;
+    margin-top: -1rem;
+    font-size: 1rem;
+    height: 2rem;
+    width: 1.5rem;
+    border: 1px solid #e2e7e8;
+    border-radius: 50% 50%;
+    background-color: #1a9ea2;
+    color: white;
+    padding-left: .7rem;
+    padding-top: .5rem;
+}*/
+.search{
+    position: relative;
+    padding-left: 2rem;
+    padding-top: 5rem;
+}
+.search a{
+    position: absolute;
+    margin-top: 2rem;
+}
+.search p{
+    white-space: pre-line;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-left: 3rem;
+}
+nav{
+    text-align: center;
+    padding-top: 3rem;
+}
+nav a{
+    color: #82979c;
+    margin-left: 10rem;
+    text-decoration: none;
+    letter-spacing: .5rem;
+}
+.bookings{
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+.bookings-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 5rem;
+}
+.bookings-menu a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    background-color: #1eacb0;
+    border: 1px solid #1eacb0;
+    padding-left: 2rem;
+    border-left: 1px solid #0ea7aa;
+}
+.bookings-menu a i{
+    position: absolute;
+    top: 40%;
+    right: 1rem;
+}
+#active{border-top: 5px solid #92c741;}
+.booking-inputs{
+    display: grid;
+    grid-template-columns: 25rem auto 15rem;
+    border: 1px solid #f8f8f8;
+    border-radius: 5.5px;
+}
+.booking-inputs input{
+    height: 3rem;
+    margin-top: 2rem;
+    margin-left: .5rem;
+    width: 18rem;
+    border: .5px solid #0b9196;
+    border-radius: 5.5px;
+}
+.booking-inputs span{
+    font-size: 3rem;
+    color: #1a9ea2;
+    padding-top: 2rem;
+    padding-left: 3rem;
+}
+.destination, .calendar{position: relative}
+.destination i{
+    position: absolute;
+    bottom: 30%;
+    margin-left: -2.5rem;
+    font-size: 2rem;
+    color: #0b9196;
+    border-bottom: 1px solid #0b9196;
+}
+.destination label{padding-left: 2rem;}
+.booking-inputs label{
+    font-size: 1.3rem;
+    font-weight: 100;
+    font: verdana;
+}
+.calendar{
+    display: grid;
+    grid-template-columns: auto 9rem auto;
+}
+.calendar input{
+    width: 27rem;
+}
+.calendar label{
+    border: 1px solid #bfbfbf;
+    padding: .3rem;
+    width: 1rem;
+    margin-left: 1rem;
+}
+.calendar i{
+    position: absolute;
+    margin-top: 3rem;
+    margin-left: -3rem;
+}
+.calendar .abs-pos{
+    padding: 0;
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: grey;
+    font-weight: bold;
+}
+.booking-inputs button{
+    margin-top: 1.5rem;
+    height: 4rem;
+    widows: 10rem;
+    border: 1px solid #92c741;
+    border-radius: 5.5px;
+    background-color: #92c741;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+}
+.post-header{
+    background-image: url(pictures/citynight.jpg);
+    background-size: cover;
+    color: white;
+    position: relative;
+    display: grid;
+    grid-template-columns: 20rem auto;
+}
+.post-header span{
+    display: block;
+    color: black;
+    padding: 5px;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid white;
+    border-radius: 50% 50%;
+    background-color: white;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.angle{
+    margin-top: 10rem;
+    margin-left: 10rem;
+}
+.random{margin-top: 5rem;}
+.random p, .random h3, .random h4{
+    margin-bottom: 1rem;
+    letter-spacing: .3rem;
+}
+.random h4{
+    margin-bottom: -6rem;
+    position: relative;
+    border: 1px soild transparent;
+}
+.random h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 3%;
+    border-bottom: 3px solid white;
+}
+.random p{
+    font-size: 8rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+.random button{
+    height: 4rem;
+    width: 13rem;
+    background-color: white;
+    color: grey;
+    border: 1px solid white;
+    border-radius: 5.5px;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    word-spacing: 1.5rem;
+}
+.explore{
+    margin-left: 5%;
+    margin-right: 5%;
+    border-top: 1px solid transparent;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1rem 17rem auto;
+}
+.explore::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1rem;
+    border-top: 3px solid grey;
+}
+.explore::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 1rem;
+    border-top: 3px solid grey;
+}
+.explore h2, .explore h4{
+    text-align: center;
+    letter-spacing: .5rem;
+}
+.explore h4{
+    color: grey;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: -4rem;
+}
+.explore h2{
+    font-family: Georgia, Times,'Times New Roman', serif;
+    font-size: 6rem;
+    font-weight: 300;
+}
+#sample{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "grid-1 grid-2";
+    grid-column-gap: 2rem;
+}
+.grid-1{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% auto;
+    grid-template-areas: 
+      "subgrid-1"
+      "subgrid-2";
+    grid-row-gap: 2rem;
+}
+.grid-2{
+    display: grid;
+    grid-template-rows: 40% auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "subgrid-3"
+      "subgrid-4";
+    grid-row-gap: 2rem;
+}
+.subgrid-2, .subgrid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1rem;
+}
+.subgrid-1, .subgrid2-pic1, .subgrid2-pic2, 
+.subgrid3-pic1, .subgrid3-pic2, .subgrid-4{
+    background-size: cover;
+}
+.subgrid-1, .subgrid-4{background-image: url(pictures/colorful.jpeg);}
+.subgrid2-pic1, .subgrid2-pic2, .subgrid3-pic2, .subgrid3-pic1{
+    background-image: url(pictures/waterfall.jpg);
+}
+.newsletter{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    background-color: #f8f8f8;
+}
+.part2, .part1{
+    margin-top: 11rem;
+    position: relative;
+}
+.part1{
+    padding-left: 5rem;
+}
+.newsletter h5{
+    font-size: 1rem;
+    color: #1a9ea2;
+    letter-spacing: .2rem;
+    margin-bottom: -3.5rem;
+}
+.newsletter p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4rem;
+}
+.part2 input{
+    margin-top: 4rem;
+    width: 50rem;
+    height: 4rem;
+    border: 1px solid #f8f8f8;
+    border-radius: 5.5px;
+}
+.part2 span,.part2 button{position: absolute;}
+.part2 button{
+    top: 30%;
+    height: 3rem;
+    width: 10rem;
+    border: 1px solid #0fb7ba;
+    border-radius: 5.5px;
+    background-color: #0fb7ba;
+    font-size: .8rem;
+    color: white;
+    margin-left: -11rem;
+    margin-top: -.4rem;
+}
+.part2 span{
+    top: 30%;
+    margin-left: 3rem;
+}
+.footer{
+    background-color: #00191c;
+    color: white;
+}
+.footer a{color: white}
+.info-section{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-around
+}
+.info-section a, .info-section p{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    white-space: pre-line;
+    color: white;
+    text-decoration: none;
+}
+.payment-section{
+    margin-top: 3rem;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #0b9196;
+    height: 6rem;
+}
+.payment-section h4{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 2rem;
+}
+.payment-section a{padding-top: 1.7rem;}
+.legal-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    font-size: 1rem;
+    color: white;
+}
+.div1, .div2{
+    margin-left: 12rem;
+    margin-top: 3rem;
+    word-spacing: .5rem;
+}
+.div2 span{
+    padding-top: .8rem;
+    padding-left: 1rem;
+    padding-right: -.3rem;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid white;
+    border-radius: 50% 50%;
+}
